@@ -1,5 +1,5 @@
 //
-//  LoginView.swift
+//  SignUpView.swift
 //  Stampy
 //
 //  Created by F_s on 5/19/25.
@@ -7,11 +7,16 @@
 
 import SwiftUI
 
-struct LoginView: View {
+struct SignUpView: View {
+	@Environment(\.presentationMode) var presentationMode
+	
 	@State private var email: String = ""
 	@State private var password: String = ""
+	@State private var confirmPassword: String = ""
+	@State private var nickname: String = ""
 	@State private var isPasswordVisible = false
-	@State private var isLoggedIn = false
+	@State private var isConfirmPasswordVisible = false
+	@State private var isSignedUp = false
 	
 	var body: some View {
 		ZStack {
@@ -21,30 +26,32 @@ struct LoginView: View {
 				.scaledToFill()
 				.ignoresSafeArea()
 			
-			// 🔹 실제 로그인 UI
 			VStack(spacing: 20) {
-				Spacer(minLength: 20)
+				Spacer()
 				
-				Text("Stampy 🐾")
+				Text("회원가입")
 					.font(.title)
 					.bold()
 				
 				VStack(spacing: 16) {
+					
+					// 이메일
 					TextField("이메일(아이디)를 입력해주세요", text: $email)
 						.padding()
 						.background(Color.white)
 						.overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray))
 						.padding(.horizontal)
 					
+					// 비밀번호
 					HStack {
 						if isPasswordVisible {
 							TextField("비밀번호를 입력해주세요", text: $password)
 						} else {
 							SecureField("비밀번호를 입력해주세요", text: $password)
 						}
-						Button(action: {
+						Button {
 							isPasswordVisible.toggle()
-						}) {
+						} label: {
 							Image(systemName: isPasswordVisible ? "eye" : "eye.slash")
 								.foregroundColor(.gray)
 						}
@@ -53,35 +60,41 @@ struct LoginView: View {
 					.background(Color.white)
 					.overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray))
 					.padding(.horizontal)
-				}
-				
-				HStack {
-					Text("이메일 찾기")
-					Spacer().frame(width: 10)
-					Text("|")
-					Spacer().frame(width: 10)
-					Text("비밀번호 찾기")
-				}
-				.font(.footnote)
-				.foregroundColor(.black)
-				
-				Spacer()
-				Button(action: {
-					isLoggedIn = true
-				}) {
-					Text("회원가입")
-						.frame(maxWidth: .infinity)
+					
+					// 비밀번호 확인
+					HStack {
+						if isConfirmPasswordVisible {
+							TextField("비밀번호를 다시 입력해주세요", text: $confirmPassword)
+						} else {
+							SecureField("비밀번호를 다시 입력해주세요", text: $confirmPassword)
+						}
+						Button {
+							isConfirmPasswordVisible.toggle()
+						} label: {
+							Image(systemName: isConfirmPasswordVisible ? "eye" : "eye.slash")
+								.foregroundColor(.gray)
+						}
+					}
+					.padding()
+					.background(Color.white)
+					.overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray))
+					.padding(.horizontal)
+					
+					// 닉네임
+					TextField("닉네임을 입력해주세요", text: $nickname)
 						.padding()
-						.background(Color(red: 57/255, green: 71/255, blue: 75/255))
-						.foregroundColor(.white)
-						.cornerRadius(10)
+						.background(Color.white)
+						.overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray))
 						.padding(.horizontal)
 				}
 				
+				Spacer()
+				
 				Button(action: {
-					isLoggedIn = true
+					// 실제 회원가입 로직 처리 가능
+					presentationMode.wrappedValue.dismiss()
 				}) {
-					Text("로그인")
+					Text("회원가입 완료")
 						.frame(maxWidth: .infinity)
 						.padding()
 						.background(Color(red: 57/255, green: 71/255, blue: 75/255))
@@ -93,13 +106,14 @@ struct LoginView: View {
 				Spacer()
 			}
 		}
-		.fullScreenCover(isPresented: $isLoggedIn) {
-			ContentView()
-		}
 	}
+}
+
+#Preview {
+	SignUpView()
 }
 
 
 #Preview {
-    LoginView()
+    SignUpView()
 }

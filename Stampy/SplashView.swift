@@ -12,20 +12,29 @@ struct SplashView: View {
 	
 	var body: some View {
 		if isActive {
+			// 메인 화면으로 전환 (예: ContentView)
 			LoginView()
 		} else {
-			VStack {
-				Text("🔥 챌린지 시작! 🔥")
-					.font(.largeTitle)
-					.bold()
-				Spacer().frame(height: 40)
-				ProgressView()
+			ZStack {
+				Image("SplashImage")
+					.resizable()
+					.scaledToFill()
+					.ignoresSafeArea() // 전체 화면으로
+				
+				// 여기에 로고나 텍스트 추가 가능
+				// Text("앱 이름").font(.largeTitle).bold().foregroundColor(.white)
 			}
 			.onAppear {
-				DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-					isActive = true
+				DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+					withAnimation {
+						isActive = true
+					}
 				}
 			}
 		}
 	}
+}
+
+#Preview {
+	SplashView()
 }

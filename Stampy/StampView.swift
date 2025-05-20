@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct StampView: View {
-	@Environment(\.presentationMode) var presentationMode
-	
 	let challengeTitle: String
-	let totalDays: Int = 50
-	let stampsPerPage = 30
+	let totalDays: Int
+	let challengeColor: Color
 	
+	let stampsPerPage = 30
 	@State private var currentPage = 0
-	@State private var completedDays: Set<Int> = [0, 1, 2, 3, 4, 5, 6, 15, 16]  // 예시로 1~7일차, 16~17일차 완료
+	@State private var completedDays: Set<Int> = [0, 1, 2, 3, 4, 5, 6, 15, 16]
+	@Environment(\.dismiss) private var dismiss  // ⬅️ Navigation back
 	
 	var totalPages: Int {
 		(totalDays + stampsPerPage - 1) / stampsPerPage
@@ -23,29 +23,32 @@ struct StampView: View {
 	
 	var body: some View {
 		ZStack {
-			Color(red: 227/255, green: 243/255, blue: 247/255)
+			Image("background2")
+				.resizable()
+				.scaledToFill()
 				.ignoresSafeArea()
 			
 			VStack(spacing: 20) {
+				Spacer()
 				Text("My Challenge 🐾")
 					.font(.title)
 					.bold()
 				
 				VStack(spacing: 16) {
 					Text(challengeTitle)
-						.font(.headline)
-						.padding(.top, 8)
+						.font(.title2)
+						.padding(.vertical, 12)
 					
-					// 스탬프 그리드
 					let start = currentPage * stampsPerPage
 					let end = min(start + stampsPerPage, totalDays)
 					let currentItems = Array(start..<end)
 					
-					LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 5), spacing: 12) {
+					LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 5), spacing: 20) {
 						ForEach(currentItems, id: \.self) { index in
 							RoundedRectangle(cornerRadius: 4)
-								.fill(completedDays.contains(index) ? Color.pink.opacity(0.6) : Color.gray.opacity(0.4))
-								.frame(height: 40)
+								.fill(completedDays.contains(index) ? challengeColor : Color.gray.opacity(0.4))
+								.frame(height: 35)
+								.frame(width: 45)
 								.onTapGesture {
 									if completedDays.contains(index) {
 										completedDays.remove(index)
@@ -56,8 +59,8 @@ struct StampView: View {
 						}
 					}
 					
-					// 페이지 표시
 					HStack {
+						
 						Button(action: {
 							if currentPage > 0 { currentPage -= 1 }
 						}) {
@@ -76,20 +79,21 @@ struct StampView: View {
 						}
 						.disabled(currentPage == totalPages - 1)
 					}
-					.padding(.horizontal, 40)
+					.padding(.top, 20)
+					.padding(.bottom, 10)
 					
-					// 돌아가기 버튼
+					// 🔹 돌아가기 버튼
 					Button(action: {
-						presentationMode.wrappedValue.dismiss()
+						dismiss() // ✅ NavigationStack의 뒤로가기
 					}) {
 						Text("돌아가기")
 							.foregroundColor(.white)
-							.padding(.vertical, 10)
-							.padding(.horizontal, 30)
+							.padding(.vertical, 12)
+							.padding(.horizontal, 36)
 							.background(Color(red: 55/255, green: 78/255, blue: 85/255))
 							.cornerRadius(8)
 					}
-					.padding(.top, 10)
+					.padding(.bottom, 10)
 				}
 				.padding()
 				.background(Color.white)
@@ -101,10 +105,11 @@ struct StampView: View {
 			}
 			.padding(.top, 40)
 		}
+		.navigationBarBackButtonHidden(true) // 시스템 back 숨기고
 	}
 }
 
 #Preview {
-	StampView(challengeTitle: "코테 1문제 풀기")
+	StampView(challengeTitle: "1시 전에 자기", totalDays: 30, challengeColor: Color.indigo.opacity(0.6))
 }
 

@@ -18,6 +18,11 @@
 		80D2CA1B2DDAEECB00C7BCFF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2CA1A2DDAEECB00C7BCFF /* LoginView.swift */; };
 		80D2CA1D2DDAEF1100C7BCFF /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2CA1C2DDAEF1100C7BCFF /* ChallengeView.swift */; };
 		80D2CA1F2DDB3C5100C7BCFF /* StampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2CA1E2DDB3C5100C7BCFF /* StampView.swift */; };
+		80D2CA212DDB755800C7BCFF /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2CA202DDB755800C7BCFF /* SignUpView.swift */; };
+		80D2CA232DDB7FEC00C7BCFF /* ChallengeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2CA222DDB7FEC00C7BCFF /* ChallengeData.swift */; };
+		80D2CA272DDB818800C7BCFF /* ChallengeTemplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2CA262DDB818800C7BCFF /* ChallengeTemplete.swift */; };
+		80D2CA292DDB838E00C7BCFF /* ChallengeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2CA282DDB838E00C7BCFF /* ChallengeItem.swift */; };
+		80D2CA2B2DDB857600C7BCFF /* IconSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2CA2A2DDB857600C7BCFF /* IconSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +57,11 @@
 		80D2CA1A2DDAEECB00C7BCFF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		80D2CA1C2DDAEF1100C7BCFF /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 		80D2CA1E2DDB3C5100C7BCFF /* StampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampView.swift; sourceTree = "<group>"; };
+		80D2CA202DDB755800C7BCFF /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		80D2CA222DDB7FEC00C7BCFF /* ChallengeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeData.swift; sourceTree = "<group>"; };
+		80D2CA262DDB818800C7BCFF /* ChallengeTemplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeTemplete.swift; sourceTree = "<group>"; };
+		80D2CA282DDB838E00C7BCFF /* ChallengeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeItem.swift; sourceTree = "<group>"; };
+		80D2CA2A2DDB857600C7BCFF /* IconSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,13 +113,18 @@
 			isa = PBXGroup;
 			children = (
 				80D2C9EE2DDAEE8E00C7BCFF /* StampyApp.swift */,
-				80D2C9F02DDAEE8E00C7BCFF /* ContentView.swift */,
-				80D2C9F22DDAEE9600C7BCFF /* Assets.xcassets */,
 				80D2C9F42DDAEE9600C7BCFF /* Preview Content */,
 				80D2CA182DDAEEBB00C7BCFF /* SplashView.swift */,
+				80D2CA202DDB755800C7BCFF /* SignUpView.swift */,
 				80D2CA1A2DDAEECB00C7BCFF /* LoginView.swift */,
+				80D2C9F22DDAEE9600C7BCFF /* Assets.xcassets */,
+				80D2C9F02DDAEE8E00C7BCFF /* ContentView.swift */,
 				80D2CA1C2DDAEF1100C7BCFF /* ChallengeView.swift */,
 				80D2CA1E2DDB3C5100C7BCFF /* StampView.swift */,
+				80D2CA2A2DDB857600C7BCFF /* IconSelectionView.swift */,
+				80D2CA222DDB7FEC00C7BCFF /* ChallengeData.swift */,
+				80D2CA262DDB818800C7BCFF /* ChallengeTemplete.swift */,
+				80D2CA282DDB838E00C7BCFF /* ChallengeItem.swift */,
 			);
 			path = Stampy;
 			sourceTree = "<group>";
@@ -271,10 +286,15 @@
 			files = (
 				80D2C9F12DDAEE8E00C7BCFF /* ContentView.swift in Sources */,
 				80D2C9EF2DDAEE8E00C7BCFF /* StampyApp.swift in Sources */,
+				80D2CA292DDB838E00C7BCFF /* ChallengeItem.swift in Sources */,
 				80D2CA1F2DDB3C5100C7BCFF /* StampView.swift in Sources */,
+				80D2CA232DDB7FEC00C7BCFF /* ChallengeData.swift in Sources */,
+				80D2CA212DDB755800C7BCFF /* SignUpView.swift in Sources */,
 				80D2CA1B2DDAEECB00C7BCFF /* LoginView.swift in Sources */,
 				80D2CA1D2DDAEF1100C7BCFF /* ChallengeView.swift in Sources */,
 				80D2CA192DDAEEBB00C7BCFF /* SplashView.swift in Sources */,
+				80D2CA272DDB818800C7BCFF /* ChallengeTemplete.swift in Sources */,
+				80D2CA2B2DDB857600C7BCFF /* IconSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
