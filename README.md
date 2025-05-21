@@ -4,9 +4,6 @@
 
 ---
 
-
----
-
 ## ✨ 핵심 기능
 
 - 챌린지 생성 및 삭제 기능
@@ -21,6 +18,8 @@
 ---
 
 ## 📸 미리보기
+<img src="![SplashView](https://github.com/user-attachments/assets/82bca07a-f36d-4ce2-af70-14560487603c)" alt="SplashView" width="300"/>
+
 ![SplashView](https://github.com/user-attachments/assets/82bca07a-f36d-4ce2-af70-14560487603c)
 ![LoginView](https://github.com/user-attachments/assets/ef9cf632-1d1d-4b96-a49e-3290e74bc19f)
 ![ContentView](https://github.com/user-attachments/assets/d9100820-425a-43e1-a27b-8732723eeb9d)
