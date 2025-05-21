@@ -19,22 +19,22 @@
 
 ## 📸 미리보기
 <p float="left">
-<img src="https://github.com/user-attachments/assets/82bca07a-f36d-4ce2-af70-14560487603c" alt="SplashView" width="300"/>
-<img src="https://github.com/user-attachments/assets/ef9cf632-1d1d-4b96-a49e-3290e74bc19f" alt="LoginView" width="300"/>
-<img src="https://github.com/user-attachments/assets/d9100820-425a-43e1-a27b-8732723eeb9d" alt="ContentView" width="300"/>
+<img src="https://github.com/user-attachments/assets/82bca07a-f36d-4ce2-af70-14560487603c" alt="SplashView" width="200"/>
+<img src="https://github.com/user-attachments/assets/ef9cf632-1d1d-4b96-a49e-3290e74bc19f" alt="LoginView" width="200"/>
+<img src="https://github.com/user-attachments/assets/d9100820-425a-43e1-a27b-8732723eeb9d" alt="ContentView" width="200"/>
 </p>
 
 <p float="left">
-<img src="https://github.com/user-attachments/assets/2c26c024-b27e-40bb-bd60-58a93be90420" alt="StampView" width="300"/>
-<img src="https://github.com/user-attachments/assets/0ea4b2ea-1311-46b6-b026-8b27572542bf" alt="DateSelection" width="300"/>
-<img src="https://github.com/user-attachments/assets/d8422f81-f566-4c7a-b3de-e707de19679a" alt="IconSelectionView" width="300"/>
+<img src="https://github.com/user-attachments/assets/2c26c024-b27e-40bb-bd60-58a93be90420" alt="StampView" width="200"/>
+<img src="https://github.com/user-attachments/assets/0ea4b2ea-1311-46b6-b026-8b27572542bf" alt="DateSelection" width="200"/>
+<img src="https://github.com/user-attachments/assets/d8422f81-f566-4c7a-b3de-e707de19679a" alt="IconSelectionView" width="200"/>
 </p>
 
 <p float="left">
-<img src="https://github.com/user-attachments/assets/f4aa167a-cb8a-4033-a33d-b2018d97b767" alt="StampView2" width="300"/>
-<img src="https://github.com/user-attachments/assets/95e5294c-5bd1-4c05-aee3-c8d1be8dd234" alt="ChallengeView" width="300"/>
-<img src="https://github.com/user-attachments/assets/f3e29663-f773-48ce-97bd-4de4a80f3b4a" alt="ChallengeView2" width="300"/>
-<img src="https://github.com/user-attachments/assets/ff354b8c-22a9-416d-a8b5-2d0fe58e117e" alt="ContentView2" width="300"/>
+<img src="https://github.com/user-attachments/assets/f4aa167a-cb8a-4033-a33d-b2018d97b767" alt="StampView2" width="200"/>
+<img src="https://github.com/user-attachments/assets/95e5294c-5bd1-4c05-aee3-c8d1be8dd234" alt="ChallengeView" width="200"/>
+<img src="https://github.com/user-attachments/assets/f3e29663-f773-48ce-97bd-4de4a80f3b4a" alt="ChallengeView2" width="200"/>
+<img src="https://github.com/user-attachments/assets/ff354b8c-22a9-416d-a8b5-2d0fe58e117e" alt="ContentView2" width="200"/>
 </p>
 
 
